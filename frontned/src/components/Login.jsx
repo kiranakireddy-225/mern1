@@ -15,7 +15,7 @@ const Login = () => {
     if (email && password) {
       try {
         const res = await axios.post("http://localhost:5000/api/auth/login", user);
-        alert("Login successful, welcome " + res.data.user.name);
+        alert("Login successful, welcome!!! " + res.data.user.name);
         setUser({ email: "", password: "" });
         // Save token to localStorage or context (optional)
         localStorage.setItem("token", res.data.token);
